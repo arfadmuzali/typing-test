@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Test</title>
+    <link rel="icon" href="asset/img/keyboard-solid.svg" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awsome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Style -->
+    <link rel="stylesheet" href="script/css/style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <button class="symbol-input" onclick="getReload()">
+        <i class="fa-solid fa-file"></i>
+      </button>
+    </div>
+    <div class="container-input-words">
+      <textarea
+        name="input-text"
+        id="input-words"
+        placeholder="Masukan Kata..."
+        spellcheck="false"
+        autofocus
+      ></textarea>
+      <button class="button-start" onclick="getStart()">Start</button>
+    </div>
+    <div class="text" id="text"></div>
+    <div class="container-input-typing">
+      <input type="text" id="input-typing" />
+      <button id="repeat" onclick="getRepeat()">
+        <i class="fa-solid fa-repeat"></i>
+      </button>
+    </div>
+    <div class="container-result">
+      <p class="p-result">
+        <span id="result" class="result"></span> WPM (
+        <span id="word" class="result"></span> words in
+        <span id="time" class="result"></span> s )
+      </p>
+    </div>
+    <div class="alert">
+      <button onclick="erased()"><i class="fa-solid fa-x"></i></button>
+      <p>Tab + Enter for repeat</p>
+    </div>
+
+    <!-- Script -->
+    <script src="script/javascript/main.js"></script>
+    <!-- Style JS -->
+    <script src="script/javascript/style.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  font-family: "Noto Sans", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(44, 44, 44);
+}
+.symbol-input {
+  background-color: inherit;
+  color: rgb(255, 255, 0);
+  font-size: 2.5rem;
+  margin: 1rem 20%;
+  cursor: pointer;
+}
+.symbol-input i:hover {
+  background-color: rgb(59, 59, 59);
+  border-radius: 5px;
+}
+.symbol-input i:active {
+  background-color: inherit;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+.container-input-words {
+  background-color: rgb(73, 73, 73);
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 750px;
+  height: 300px;
+  box-shadow: 2px 1px 2px black;
+}
+
+#input-words {
+  resize: none;
+  font-size: 1rem;
+  background-color: rgb(46, 46, 46);
+  color: rgb(150, 150, 150);
+  padding: 10px;
+  width: 350px;
+  height: 200px;
+}
+.button-start {
+  background-color: inherit;
+  color: rgb(255, 255, 0);
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 2px solid rgb(255, 255, 0);
+}
+.button-start:hover {
+  background-color: rgb(44, 44, 44);
+}
+.button-start:focus {
+  background-color: rgb(44, 44, 44);
+}
+.text {
+  width: 750px;
+  padding: 40px;
+  height: auto;
+  word-spacing: 10px;
+  letter-spacing: 4px;
+  font-size: 1.5rem;
+  color: rgb(150, 150, 150);
+  text-shadow: 2px 2px 1px rgb(0, 0, 0, 0.5);
+  margin: auto;
+}
+#input-typing {
+  width: 350px;
+  padding: 10px;
+  font-size: 1.5rem;
+  height: auto;
+  background-color: rgb(44, 44, 44);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  color: rgb(216, 216, 216);
+}
+#input-typing:focus {
+  background-color: rgb(58, 58, 58);
+}
+#repeat i {
+  font-size: 1.5rem;
+}
+#repeat {
+  background-color: inherit;
+  padding: 1rem;
+  margin: auto;
+  color: rgb(255, 255, 0);
+}
+#repeat:hover {
+  color: rgb(179, 179, 0);
+}
+#repeat:focus {
+  background-color: rgb(73, 73, 73);
+  border-radius: 5px;
+}
+.container-input-typing {
+  width: fit-content;
+  padding: 10px;
+  margin: auto;
+}
+.container-result {
+  width: 400px;
+  margin: auto;
+  padding: 10px;
+  display: none;
+}
+.p-result {
+  font-size: 1.6rem;
+  color: rgb(150, 150, 150);
+  height: fit-content;
+  margin: 20px 0;
+  padding: 5px;
+  background-color: rgb(44, 44, 44);
+}
+.p-result .result {
+  color: rgb(255, 255, 0);
+}
+.alert {
+  background-color: rgb(255, 255, 0);
+  position: absolute;
+  right: 10px;
+  top: -300px;
+  border-radius: 5px;
+  width: 220px;
+  height: 45px;
+  padding: 10px 10px 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.4s;
+}
+.alert p {
+  display: inline-block;
+}
+.alert button {
+  background-color: inherit;
+  font-size: 1rem;
+  padding: 3px 5px;
+}
+.alert button:hover {
+  color: rgb(255, 38, 0);
+}
