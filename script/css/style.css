@@ -79,9 +79,13 @@ body {
   border-radius: 5px;
   color: rgb(216, 216, 216);
 }
-#input-typing:focus {
-  background-color: rgb(58, 58, 58);
+.incorect-typing#input-typing {
+  background-color: rgb(255, 38, 0);
+  color: rgb(27, 27, 27);
 }
+/* #input-typing:focus {
+  background-color: rgb(58, 58, 58);
+} */
 #repeat i {
   font-size: 1.5rem;
 }
@@ -143,4 +147,17 @@ body {
 }
 .alert button:hover {
   color: rgb(255, 38, 0);
+}
+#time-info {
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: rgb(255, 255, 0);
+  background-color: inherit;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }

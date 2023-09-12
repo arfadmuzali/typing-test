@@ -16,10 +16,12 @@ let time = 0;
 let arrayIndex = 0;
 
 // Main Program
-function typingHandler(arrParam, funcParam) {
+function typingHandler(arrParam) {
   const interval = setInterval(() => {
     time += 100;
-    console.log(time / 1000);
+    const timeInfo = document.getElementById("time-info");
+    timeInfo.textContent = time / 1000;
+    // console.log(time / 1000);
     if (arrayIndex === arrParam.length) {
       const totalTime = time / 1000;
       const cal = (60 / totalTime) * arrParam.length;
@@ -42,8 +44,12 @@ function typingHandler(arrParam, funcParam) {
         e.preventDefault();
         arrayIndex++;
         inputTyping.value = "";
+        inputTyping.classList.remove("incorect-typing");
       } else {
-        console.log("kata salah");
+        e.preventDefault();
+        inputTyping.value = "";
+        inputTyping.classList.add("incorect-typing");
+        console.log(arrayIndex);
       }
     }
   });
@@ -58,7 +64,18 @@ function getStart() {
   document.getElementById("input-typing").focus();
   typingHandler(arrInput);
 }
-
+function randomWords(length) {
+  const containerDisplay = document.querySelector(".container-input-words");
+  let arrInput = [];
+  for (let i = 0; i < length; i++) {
+    let random = Math.floor(Math.random() * words.length);
+    arrInput.push(words[random]);
+  }
+  text.textContent = arrInput.join(" ");
+  containerDisplay.style.display = "none";
+  document.getElementById("input-typing").focus();
+  typingHandler(arrInput);
+}
 // Press Start Button Or Enter
 inputWords.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
@@ -68,6 +85,7 @@ inputWords.addEventListener("keydown", (e) => {
 
 // Repeat
 function getRepeat() {
+  inputTyping.classList.remove("incorect-typing");
   time = 0;
   arrayIndex = 0;
   inputTyping.value = "";

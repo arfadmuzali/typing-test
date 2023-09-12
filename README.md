@@ -1,5 +1,5 @@
 # Typing Test
 
-> > Masih dalam pengembangan
+> > untuk random word masih dalam pengembangan
 
 > https://arfadmuzali.github.io/typing-test/
